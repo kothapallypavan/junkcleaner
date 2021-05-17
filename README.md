@@ -6,3 +6,4 @@ requirements
 3.getpass
 Feel free to use my code :)
 #GhostKiller
+you can update it
