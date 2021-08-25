@@ -1,4 +1,5 @@
 # junkcleaner.py
+clean hidden temp files <br>
 I made this junkcleaner using python 3 <br>
 Requirements<br>
 `tkinter`<br>
