@@ -11,7 +11,7 @@ window = Tk()
 window.geometry('400x300')
 window.resizable(0, 0)
 
-#added title
+#Title
 window.title('Junk cleaner')
 
 #function to delete temp files
