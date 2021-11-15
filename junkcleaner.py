@@ -1,12 +1,12 @@
 # import modules
-import os  # for os operations
-import glob  # for paths
-import shutil  #for removing folders
-from tkinter import * #for GUI
+import os  
+import glob  
+import shutil  
+from tkinter import * 
 import base64
-import getpass #to get username
+import getpass 
 
-#creating and resizeing window
+#window creation
 window = Tk()
 window.geometry('400x300')
 window.resizable(0, 0)
@@ -14,7 +14,7 @@ window.resizable(0, 0)
 #Title
 window.title('Junk cleaner')
 
-#function to delete temp files
+#function for deleting temp files
 def clean():
     #path as string
     path = 'C:/Users/' + getpass.getuser() + '/AppData/Local/Temp'
@@ -22,20 +22,18 @@ def clean():
 
     folders = path + '/*'
     folders = glob.glob(folders)
-
-    #loop for every file in temp folder
     for file in os.listdir(path):
         files = os.path.join(path, file)     #joining path
         try:
             os.unlink(files)     #removing files
             print('Deleted')
         except:
-            print('File cannot be deleted') #if any occurs such as try againa it will not delete file
+            print('File cannot be deleted') 
 
-    #loop for every folder in temp
+
     for folder in folders:
         try:
-            shutil.rmtree(folder)  #it will remove folders
+            shutil.rmtree(folder)  #Removes a folder
             print('Directory deleted')
         except:
             print('Directory cannot be deleted')
